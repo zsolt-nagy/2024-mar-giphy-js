@@ -3,3 +3,19 @@ body {
     color: white;
     background-color: black;
 }
+
+.memes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.meme-img {
+    height: 200px;
+    margin: 25px;
+    border-radius: 25px;
+}
+
+.error-container {
+    margin: 40px;
+}
