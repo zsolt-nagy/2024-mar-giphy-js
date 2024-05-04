@@ -16,8 +16,21 @@
         <h1>Meme Generator</h1>
 
         <form id="meme-form">
-            <label for="meme-input">Meme:</label>
-            <input type="text" id="meme-input" name="meme-input" required />
+            <div class="form-row mb-2">
+                <label for="meme-input">Meme:</label>
+                <input type="text" id="meme-input" name="meme-input" required />
+            </div>
+            <div class="form-row mb-2">
+                <label for="meme-count">Number of images:</label>
+                <select name="meme-count" id="meme-count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary bg-gradient">
                 Submit
             </button>
