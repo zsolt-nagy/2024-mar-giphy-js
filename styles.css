@@ -19,3 +19,9 @@ body {
 .error-container {
     margin: 40px;
 }
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
