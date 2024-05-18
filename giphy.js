@@ -24,7 +24,13 @@ function generatePaginationListItems(pageCount) {
     }
 
     let innerPageLinks = "";
-    if (currentPage === 1) {
+    if (currentPage === 1 && pageCount === 1) {
+        innerPageLinks = `
+            <li class="page-item disabled">
+                <a class="page-link" href="#" data-page="1">1</a>
+            </li>     
+        `;
+    } else if (currentPage === 1) {
         innerPageLinks = `
             <li class="page-item disabled">
                 <a class="page-link" href="#" data-page="1">1</a>
@@ -96,8 +102,9 @@ function generatePaginationListItems(pageCount) {
 }
 
 function renderPagination(paginationInfo) {
-    let { count, offset, total_count: totalCount } = paginationInfo;
-    let pageCount = Math.ceil(totalCount / count);
+    let { total_count: totalCount } = paginationInfo;
+
+    let pageCount = Math.ceil(totalCount / memesPerPage);
 
     let html = `
 <nav 
